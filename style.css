@@ -1,0 +1,145 @@
+*
+{
+  padding:0;
+  margin:0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+body
+{
+  display: grid;
+  place-items:center;
+  height: 100vh;
+
+}
+#container
+{
+  height: 600px;
+  width: 1200px;
+  position: relative;
+  overflow: hidden;
+}
+#container #dino
+{
+  height:240px;
+  width: 70px;
+  position: absolute;
+  bottom:48px;
+  left:20px;
+}
+#container #dino img
+{
+  height: 70px;
+  width:70px;
+}
+.dinoActive
+{
+  animation: animateDino 0.5s linear infinite;
+}
+@keyframes animateDino{
+  0%,100%
+  {
+    bottom: 28px;
+  }
+  45%,55%
+  {
+    bottom: 160px;
+  }
+}
+#container #block
+{
+  height:261px;
+  width:70px;
+  position:absolute;
+  bottom:20px;
+  right:-20px;
+
+}
+
+#container #block img {
+  height: 55px;
+  width: 45px;
+}
+.blockActive
+{
+    animation: blockAnimate 2s linear infinite;
+}
+@keyframes blockAnimate{
+  0%
+  {
+    right: -125px;
+  }
+  100%
+  {
+    right:100%;
+  }
+}
+
+#container #road
+{
+  height:229px;
+  width:1200px;;
+  position:absolute;
+  bottom: 0;
+}
+#container #road img {
+  height: 30px;
+  width: 2000px;
+  position: absolute;
+  left: 0 ;
+  animation: roadAnimate 1.5s linear infinite;
+}
+@keyframes roadAnimate{
+  0%
+  {
+    left :0;
+  }
+  100%
+  {
+    left: -800px;
+  }
+}
+#container #cloud
+{
+  height:488px;
+  width:1200px;
+  border-radius: 80px;
+  position:absolute;
+  top: 10px;
+}
+#container #cloud img {
+  height: 80px;
+  width: 2000px;
+  position: absolute;
+  left: -2000px ;
+  animation: cloudAnimate 5s linear infinite;
+}
+@keyframes cloudAnimate{
+  0%
+  {
+    left :-2000px;
+  }
+  100%
+  {
+    left: 100%;
+  }
+}
+#score
+{
+  height:auto;
+  width:auto;
+  position:absolute;
+  top: 20px;
+  right: 0;
+}
+#gameOver
+{
+  display: none;
+  font-size: 50px;
+  height:190px;
+  width:362px;
+  position:absolute;
+  top: calc(50% - 90px);
+  left: calc(50% - 181px);
+  color: #525252;
+}
